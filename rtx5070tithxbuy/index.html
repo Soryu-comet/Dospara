@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ご注文完了 | ドスパラ公式通販サイト</title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        /* ヘッダーの修正：ロゴ画像に対応 */
+        .header {
+            background-color: #fff; /* ロゴが映えるよう白に */
+            padding: 10px 20px;
+            text-align: left; /* ロゴを左寄せ */
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .header img {
+            height: 40px; /* ロゴのサイズ調整 */
+            width: auto;
+            vertical-align: middle;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .success-message {
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .success-icon {
+            color: #28a745;
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+        .order-number {
+            background-color: #f9f9f9;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            margin: 15px 0;
+            border: 1px dashed #ccc;
+        }
+        .product-details {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .product-details th, .product-details td {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+        .product-details th {
+            width: 30%;
+            color: #666;
+            font-weight: normal;
+            font-size: 0.9rem;
+        }
+        .product-name {
+            color: #0056b3;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+        .price {
+            color: #d9534f;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: right;
+        }
+        .total-section {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 1.1rem;
+        }
+        .total-price {
+            color: #d0021b;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .buttons {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #002570; /* ドスパラ風ネイビー */
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #001a50;
+        }
+        .note {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+        /* ネタバラシ用のCSSは削除しました */
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://www.dospara.co.jp/on/demandware.static/Sites-dospara-Site/-/default/dwf8f71449/common/images/logo.png" alt="Dospara">
+    </div>
+
+    <div class="container">
+        <div class="success-message">
+            <div class="success-icon">✔</div>
+            <h2>ご注文ありがとうございました</h2>
+            <p>決済手続きが完了いたしました。<br>商品の発送準備を進めさせていただきます。</p>
+        </div>
+
+        <div class="order-number">
+            注文番号：20260102-89021-X
+        </div>
+
+        <h3>ご注文内容</h3>
+        <table class="product-details">
+            <tr>
+                <th>商品名</th>
+                <td class="product-name">Palit GeForce RTX 5070 Ti GameRock OC (16GB GDDR7)</td>
+            </tr>
+            <tr>
+                <th>納期目安</th>
+                <td>翌日出荷予定</td>
+            </tr>
+            <tr>
+                <th>お支払方法</th>
+                <td>クレジットカード（一括）</td>
+            </tr>
+        </table>
+
+        <div class="total-section">
+            ご請求金額：<span class="total-price">¥218,900</span> (税込)
+        </div>
+
+        <div class="note">
+            ※ ご注文確定後のキャンセル・変更はお受けできません。<br>
+            ※ 高額商品のため、ご本人様確認のお電話を差し上げる場合がございます。
+        </div>
+
+        <div class="buttons">
+            <a href="#" class="btn" onclick="return false;">トップページへ戻る</a>
+        </div>
+        
+        </div>
+
+    </body>
+</html>
