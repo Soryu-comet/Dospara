@@ -13,18 +13,18 @@
             padding: 0;
             color: #333;
         }
-        /* ヘッダーの修正：ロゴ画像に対応 */
         .header {
-            background-color: #fff; /* ロゴが映えるよう白に */
+            background-color: #fff;
             padding: 10px 20px;
-            text-align: left; /* ロゴを左寄せ */
+            text-align: left;
             border-bottom: 1px solid #ddd;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .header img {
-            height: 40px; /* ロゴのサイズ調整 */
+            height: 40px;
             width: auto;
             vertical-align: middle;
+            border: none;
         }
         .container {
             max-width: 600px;
@@ -53,6 +53,20 @@
             margin: 15px 0;
             border: 1px dashed #ccc;
         }
+        .product-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-image img {
+            max-width: 100%;
+            height: 250px;
+            object-fit: contain;
+            transition: opacity 0.2s;
+        }
+        /* 画像リンクのホバーエフェクト */
+        .product-image a:hover img {
+            opacity: 0.8;
+        }
         .product-details {
             width: 100%;
             border-collapse: collapse;
@@ -61,23 +75,30 @@
             padding: 12px 0;
             border-bottom: 1px solid #eee;
             text-align: left;
+            vertical-align: top;
         }
         .product-details th {
-            width: 30%;
+            width: 35%;
             color: #666;
             font-weight: normal;
             font-size: 0.9rem;
         }
         .product-name {
-            color: #0056b3;
             font-weight: bold;
             line-height: 1.4;
         }
-        .price {
-            color: #d9534f;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-align: right;
+        /* 商品名リンクのスタイル */
+        .product-name a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .product-name a:hover {
+            text-decoration: underline;
+        }
+        .paypal-logo {
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
         }
         .total-section {
             margin-top: 20px;
@@ -96,11 +117,12 @@
         .btn {
             display: inline-block;
             padding: 12px 30px;
-            background-color: #002570; /* ドスパラ風ネイビー */
+            background-color: #002570;
             color: white;
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
+            transition: background-color 0.2s;
         }
         .btn:hover {
             background-color: #001a50;
@@ -111,13 +133,14 @@
             margin-top: 20px;
             line-height: 1.5;
         }
-        /* ネタバラシ用のCSSは削除しました */
     </style>
 </head>
 <body>
 
     <div class="header">
-        <img src="https://www.dospara.co.jp/on/demandware.static/Sites-dospara-Site/-/default/dwf8f71449/common/images/logo.png" alt="Dospara">
+        <a href="https://www.dospara.co.jp/">
+            <img src="https://www.dospara.co.jp/on/demandware.static/Sites-dospara-Site/-/default/dwf8f71449/common/images/logo.png" alt="Dospara">
+        </a>
     </div>
 
     <div class="container">
@@ -131,36 +154,60 @@
             注文番号：20260102-89021-X
         </div>
 
+        <div class="product-image">
+            <a href="https://www.dospara.co.jp/SBR1892/IC526330.html?srsltid=AfmBOoq2b7rVZhokFdHOcm0PgCkCIepyhjTIVi8o2h_aIEtvtu6fpkZQ">
+                <img src="https://www.dospara.co.jp/dw/image/v2/BGKW_PRD/on/demandware.static/-/Sites-dospara-catalog-ms/default/dw13df5014/img/large/parts/2025/526330-11.jpg?sw=800" alt="RTX 5070 Ti">
+            </a>
+        </div>
+
         <h3>ご注文内容</h3>
         <table class="product-details">
             <tr>
                 <th>商品名</th>
-                <td class="product-name">Palit GeForce RTX 5070 Ti GameRock OC (16GB GDDR7)</td>
+                <td class="product-name">
+                    <a href="https://www.dospara.co.jp/SBR1892/IC526330.html?srsltid=AfmBOoq2b7rVZhokFdHOcm0PgCkCIepyhjTIVi8o2h_aIEtvtu6fpkZQ">
+                        Palit GeForce RTX 5070 Ti GameRock OC (16GB GDDR7)
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <th>形式</th>
+                <td>ギフト</td>
+            </tr>
+            <tr>
+                <th>購入者ユーザーID</th>
+                <td>Jindou</td>
             </tr>
             <tr>
                 <th>納期目安</th>
                 <td>翌日出荷予定</td>
             </tr>
             <tr>
+                <th>お届け先住所</th>
+                <td>〒668-****<br>兵庫県豊岡市******</td>
+            </tr>
+            <tr>
                 <th>お支払方法</th>
-                <td>クレジットカード（一括）</td>
+                <td>
+                    <img src="https://programan.s3.amazonaws.com/uploads/blog/eyecatch_image/3371/paypal_01.jpg" alt="PayPal" class="paypal-logo">
+                    PayPal決済
+                </td>
             </tr>
         </table>
 
         <div class="total-section">
-            ご請求金額：<span class="total-price">¥218,900</span> (税込)
+            ご請求金額：<span class="total-price">¥164,800</span> (税込)
         </div>
 
         <div class="note">
             ※ ご注文確定後のキャンセル・変更はお受けできません。<br>
-            ※ 高額商品のため、ご本人様確認のお電話を差し上げる場合がございます。
+            ※ PayPalの決済明細は「ドスパラ Web通販」として記載されます。
         </div>
 
         <div class="buttons">
-            <a href="#" class="btn" onclick="return false;">トップページへ戻る</a>
+            <a href="https://www.dospara.co.jp/" class="btn">トップページへ戻る</a>
         </div>
-        
-        </div>
+    </div>
 
-    </body>
+</body>
 </html>
